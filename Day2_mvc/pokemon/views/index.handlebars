@@ -1,0 +1,31 @@
+<p>Remember to run "npm install" before running the server!</p>
+<p>And run the server by using "npm run start"!</p>
+
+<h1>{{ exampleString }}</h1>
+
+
+{{#if exampleBoolean}}
+    <h2>Is Alex awesome? Yeah! </h2>
+{{/if}}
+
+{{!-- <h1>{{pokemonName}}</h1>
+<img src="{{pokemonPic}}" alt="{{pokemonName}}"> --}}
+    {{!-- <h1>{{pokeInfo[0].pokeName}}</h1> --}}
+{{#each pokeArr}}
+  <ul>{{this.pokeName}}</ul>
+  <ul><img src="{{this.pokePic}}" alt="{{this.pokeName}}"></ul>
+    {{#each pokeType}}
+      <ul>{{pokeType.type.name}}</ul>
+    {{/each}}
+{{/each}}
+
+<h3> Alex says...</h3>
+<p>{{ exampleObject.message }}</p>
+<p>{{ exampleObject.website }}</p>
+
+<h1>Today's lottery numbers are:</h1>
+<ul class="exampleArrayGoesHere">
+  {{#each exampleArray}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
